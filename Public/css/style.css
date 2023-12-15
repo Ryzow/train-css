@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*,
+html{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.container-navbar {
+    height: auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+}
+
+/* Logo */
+.container-navbar > .navbar-logo {
+    padding: .08rem 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+    background: -webkit-linear-gradient(#2fc8df, #9df2ff);
+    background: linear-gradient(to right,#2fc8df, #9df2ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 3s up-down infinite linear;
+}
+
+/* Navbar Content */
+.container-navbar > .navbar-nav > ul > li > a {
+    color: #ffffff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /* background-color: black; */
+}
+
+.container-navbar > .navbar-nav > ul > li > a:hover {
+    transition: .3s all ease-in-out;
+    border-bottom: 2px solid #000;
+}
+
+/* .container-navbar > .navbar-nav > ul > li > a:not(:hover) {
+    transition: all 3s ease-in-out;
+} */
+
+.container-navbar > .navbar-action > ul > li > a {
+    font-size: 10px;
+    color: #dbdbdbff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* background-color: black; */
+}
+
+#ham-menu {
+    display: none;
+}
+/* Navbar End */
+
+/* Home */
+.home {
+    background-image: url("/Src/img/image-1.avif");
+}
+.about {
+    background-image: url("/Src/img/image-2.jpg");
+}
+.contact {
+    background-image: url("/Src/img/image-3.jpg");
+}
+/* Home End */
+
+/* Card Components */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    margin: 8px;
+    padding: 32px;
+    width: 26%;
+    border: 1px solid black;
+    box-shadow: 0  1px 2px 2px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.card:hover {
+    scale: .97;
+    transition: .2s all ease-in-out;
+    animation: shake 1.3s linear infinite;
+}
+
+.card:not(:hover) {
+    transition: .2s all ease-in-out;
+}
+
+.title {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.description {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: text;
+}
+
+.btn-act {
+    text-align: center;
+    border: none;
+    border-radius: 35px;
+    padding: 6px 16px;
+    margin: 7px auto;
+    cursor: pointer;
+    background-color: #8d7e76;
+    color: #fff;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .5);
+}
+
+.btn-act:hover {
+    scale: 1.1;
+    transition: .15s all ease-in-out;
+    background-color: #7e716a;
+}
+
+.btn-act:not(:hover){
+    transition: .15s all ease-in-out;
+}
+
+@media (max-width: 650px) {
+    .container-navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 14rem;
+        height: 100vh;
+    }
+
+    .container-navbar > .navbar-nav > ul > li > a {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        color: black;
+        font-size: 1.4rem;
+    }
+
+    .container-navbar .navbar-nav.active {
+        right: 0;
+        transition: .5s all ease-in-out;
+        background-color: white;
+        box-shadow: 1px 5px 1px 3px rgba(0, 0, 0, 0.184);
+        & ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 15px;
+
+            & li {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-top: 1px solid black;
+            }
+        }
+    }
+
+    #ham-menu {
+        display: inline-block;
+    }
+    *, html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width:476px) {
+    .container-navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 14rem;
+        height: 175px;
+    }
+
+    .container-navbar > .navbar-nav > ul > li > a {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        color: black;
+        font-size: 1.4rem;
+    }
+
+    .container-navbar .navbar-nav.active {
+        right: 0;
+        transition: .5s all ease-in-out;
+        & ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 15px;
+
+            & li {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    #ham-menu {
+        display: inline-block;
+    }
+    *, html {
+        font-size: 75%;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(-1px, 1px) rotate(1deg);
+    }
+    25% {
+        transform: translate(-1px, 1px) rotate(2deg);
+    }
+    50% {
+        transform: translate(-1px, 1px) rotate(-1deg);
+    }
+    100%{
+        transform: translate(-1px, 1px) rotate(1deg);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(0) translateX(1px);
+    }
+    25% {
+        transform: translateY(1px) translateX(-1px);
+    }
+    50% {
+        transform: translateY(2px) translateX(1px);
+    }
+    75% {
+        transform: translateY(1px) translateX(-1px);
+    }
+    100% {
+        transform: translateY(0px) translateX(1px);
+    }
+}
